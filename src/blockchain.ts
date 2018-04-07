@@ -6,10 +6,11 @@ import {BlockChainData, BlockData, TransactionData} from './types/class'
 
 export default class Blockchain implements BlockChainData {
     public blocks: BlockData[];
-
-
+    public difficulty: number;
+    
     constructor(genesisBlock: BlockData) {
         this.blocks = [];
+        this.difficulty = 1;
         this.addBlock(genesisBlock);
     }
 
@@ -46,7 +47,7 @@ export default class Blockchain implements BlockChainData {
         let hash = sha256(block.key);
         
         // mining
-        while(!hash.startsWith('7a7')) {
+        while(!hash.startsWith(Array(this.difficulty + 1).join('0'))) {
             block.nonce += 1;
             hash = sha256(block.key);
             console.log(hash);

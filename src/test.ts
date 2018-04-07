@@ -15,4 +15,4 @@ let t = new Transaction('me', 'you', 7);
 let newB = bc.getNextBlock([t]);
 bc.addBlock(newB);
 
-console.log(bc.blocks[1].transactions);
+console.log(bc);
