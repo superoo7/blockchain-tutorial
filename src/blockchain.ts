@@ -2,28 +2,7 @@ import sha256 = require('js-sha256');
 
 import Block from './block';
 
-interface TransactionData {
-    from: string;
-    to: string;
-    amount: number;
-}
-
-interface BlockData {
-    index: number;
-    hash: string;
-    previousHash: string;
-    nonce: number;
-    transactions: TransactionData[];
-    key: string;
-}
-
-interface BlockChainData {
-    blocks: BlockData[];
-    addBlock(block: BlockData): void;
-    getNextBlock(transations: TransactionData[]): BlockData;
-    getPreviousBlock(): BlockData;
-    generateHash(block: BlockData): string;
-}
+import {BlockChainData, BlockData, TransactionData} from './types/class'
 
 export default class Blockchain implements BlockChainData {
     public blocks: BlockData[];

@@ -1,17 +1,4 @@
-interface TransactionData {
-    from: string;
-    to: string;
-    amount: number;
-}
-
-interface BlockData {
-    index: number;
-    hash: string;
-    previousHash: string;
-    nonce: number;
-    transactions: TransactionData[];
-    key: string;
-}
+import {BlockData, TransactionData} from './types/class'
 
 export default class Block implements BlockData {
     constructor(
