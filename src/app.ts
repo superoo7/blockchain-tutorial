@@ -6,7 +6,6 @@ import * as bodyParser from 'body-parser';
 import Blockchain from './blockchain';
 import Block from './block';
 import Transaction from './transaction';
-import { WSAELOOP } from 'constants';
 import { TransactionData } from './types/class';
 
 // Setup express REST API
