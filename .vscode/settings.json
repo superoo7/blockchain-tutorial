@@ -1,0 +1,41 @@
+{
+    "tslint.enable": true,
+    "typescript.tsdk": "./node_modules/typescript/lib",
+    "files.exclude": {
+      "**/.git": true,
+      "**/.svn": true,
+      "**/.hg": true,
+      "**/.DS_Store": true,
+      "**/node_modules": false,
+      "**/*.map": {
+        "when": "$(basename)"
+      },
+      "**/*.js": {
+        "when": "$(basename).ts"
+      },
+      "**/*?.js": {
+        "when": "$(basename).tsx"
+      },
+      "**/*.sqlite": true
+    },
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/bower_components": true,
+      "**/*.map": true,
+      "**/dist": true,
+      "**/dist-test": true
+    },
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "files.eol": "\n",
+    "files.trimTrailingWhitespace": true,
+    "prettier.printWidth": 100,
+    "prettier.semi": false,
+    "prettier.tabWidth": 2,
+    "prettier.useTabs": false,
+    "prettier.singleQuote": true,
+    "prettier.trailingComma": "none",
+    "prettier.disableLanguages": ["markdown", "json"],
+    "editor.formatOnSave": true
+  }
+  

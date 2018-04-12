@@ -40,7 +40,6 @@ export default class Blockchain implements BlockChainData {
         block.hash = this.generateHash(block);
 
         return block;
-
     }
 
     public generateHash(block: BlockData) {

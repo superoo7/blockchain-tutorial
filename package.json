@@ -1,11 +1,32 @@
 {
   "devDependencies": {
     "@types/express": "^4.11.1",
+    "@types/jest": "^22.2.2",
     "@types/node": "^9.6.2",
+    "concurrently": "^3.5.1",
     "typescript": "^2.8.1"
   },
   "dependencies": {
     "express": "^4.16.3",
+    "jest": "^22.4.3",
     "js-sha256": "^0.9.0"
-  }
+  },
+  "name": "blockchain-tutorial",
+  "description": "## Part 1 Introduction to Block, Transaction and Blockchain",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "concurrently \"tsc -w\" \"jest --watchAll\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/superoo7/blockchain-tutorial.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/superoo7/blockchain-tutorial/issues"
+  },
+  "homepage": "https://github.com/superoo7/blockchain-tutorial#readme"
 }
